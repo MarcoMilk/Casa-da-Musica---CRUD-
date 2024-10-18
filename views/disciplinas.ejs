@@ -36,7 +36,7 @@
         <option value="Sábado ">Sábado</option>
       </select>
       <div>
-      <input type="text" name="obs" placeholder="Observação" style="flex: 0.2;">    
+      <input type="text" name="obs" id="obs" placeholder="Observação" style="flex: 0.2;">    
       </div>
   </div>
   <button type="submit" class="btn btn-success"><i class="bi bi-check2"></i> Incluir</button>
@@ -67,7 +67,7 @@
           <td>
 
           <!-- Botão de Editar -->
-          <button class="btn btn-warning" onclick="openEditModal(<%= disciplina.iddisciplina %>, '<%= disciplina.nome %>','<%= disciplina.carga_horaria %>','<%= disciplina.turno %>','<%= disciplina.dia_semana %>')"><i class="bi bi-pencil-fill"></i> Editar</button>
+          <button class="btn btn-warning" onclick="openEditModal(<%= disciplina.iddisciplina %>, '<%= disciplina.nome %>','<%= disciplina.carga_horaria %>','<%= disciplina.turno %>','<%= disciplina.dia_semana %>','<%= disciplina.obs %>')"><i class="bi bi-pencil-fill"></i> Editar</button>
 
           <!-- Botão de Excluir -->
           <button class="btn btn-danger" onclick="openDeleteModal(<%= disciplina.iddisciplina %>)"><i class="bi bi-trash"></i> Excluir</button>
@@ -108,7 +108,7 @@
             </div>
             <div class="form-group">
               <label>Observação</label>
-              <input type="text" id="edit-obs" name="data_obs" class="form-control">
+              <input type="text" id="edit-obs" name="obs" class="form-control">
             </div>
           </div>
           <div class="modal-footer">
